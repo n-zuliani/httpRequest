@@ -1,0 +1,13 @@
+<app-foo></app-foo>
+
+<!--
+1) Bisogna importare la classe HttpClientModule
+2) data ospita i dati che arrivano dal server
+   loading e' la variabile che ci notifica se siamo ancora in attesa di risposta dal server
+   o e' l'oggetto observable che si attiva nel momento in cui il server risponde
+3) HttpClient e' una classe importata dai moduli angular
+   l'oggetto http viene instanziato all'esecuzione del file ts dando un'istanza ad un attributo avente lo stesso nome del parametro del costruttore, se preceduto da "public", altrimenti dovremo dichiararlo esplicitamente e passargli l'istanza all'interno del costruttore
+4) a: crea un attributo con lo stesso nome ed istanza del parametro del costruttore
+   b: abbiamo un attributo che all'interno del costruttore prende l'istanza del parametro passatogli.
+5) Per ottenere l'oggetto observable si effettua una richiesta http.
+-->
