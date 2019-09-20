@@ -10,4 +10,8 @@
 4) a: crea un attributo con lo stesso nome ed istanza del parametro del costruttore
    b: abbiamo un attributo che all'interno del costruttore prende l'istanza del parametro passatogli.
 5) Per ottenere l'oggetto observable si effettua una richiesta http.
+6) Si utilizza il metodo subscribe avente come parametro un oggetto lambda che eseguirà il controllo sulla risposta.
+7) getData è una funziona lambda che viene eseguita nel momento in cui l'observable riceve la risposta dal server, paramtrizza un oggetto "d" e lo passa come paramtro al costruttore dell'istanza di this.data, che saranno i nostri dati effettivi (la pagina di risposta), infine notifica tramite la variabile loading che non siamo più in attesa di una risposta siccome l'abbia appena ricevuta.
+8) La prima riga crea un bottone con scritto "Make Request" che nel momento in cui viene cliccato va ad eseguire il metodo "makeRequest()" e quindi effettua la richiesta al server. La socnda riga mostra una scritta "Loading..." solo se l'attributo loading è impostato su true, l'ultima riga mostra il risultato della risposta, quindi il contenuto dell' attributo data in formato json ed utilizza il tag <pre> per far visualizzare il contenuto testuale nello stesso modo in cui ci viene inviato (spazi, indentazione, punti a capo ecc...)
+9) Un richiesta post richiede un parametro in più nel metodo post che è una stringa in formato JSON contenente i parametri da passare alla richiesta perm specificare al server cosa stiamo chiedendo esattamente, quindi creiamo un oggetto con i parametri e i rispettivi valori e lo passiamo alla funzione JSON.stringify() che lo passa in formato stringa.
 -->
